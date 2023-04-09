@@ -1,4 +1,4 @@
-const calculation = () => {
+const operate = () => {
     let num1 = Number(prompt("Enter 1st number"));
     let operator = prompt("Enter operator");
     let num2 = Number(prompt("Enter 2nd number"));
@@ -20,4 +20,12 @@ const calculation = () => {
     }
 };
 
-console.log(calculation());
+// console.log(operate());
+
+const buttons = document.querySelectorAll('.buttons button');
+const display = document.querySelector('.display');
+
+const clear = buttons[0];
+clear.onclick = () => {
+    display.textContent = "";
+}
