@@ -7,10 +7,12 @@
 .display {
   margin: 0px auto;
   margin-top: 50px;
+  padding: 13px;
   border: 2px solid blueviolet;
   width: 320px;
   height: 65px;
   font-size: 30px;
+  text-align: center;
 }
 
 .buttons {
