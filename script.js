@@ -25,7 +25,16 @@ const operate = () => {
 const buttons = document.querySelectorAll('.buttons button');
 const display = document.querySelector('.display');
 
+console.log(buttons);
+
+buttons.forEach((btn) => {
+    btn.onclick = () => {
+        display.textContent = btn.id;
+    };
+});
+
 const clear = buttons[0];
 clear.onclick = () => {
     display.textContent = "";
+    console.clear();
 }
