@@ -1,7 +1,4 @@
-const operate = () => {
-    let num1 = Number(prompt("Enter 1st number"));
-    let operator = prompt("Enter operator");
-    let num2 = Number(prompt("Enter 2nd number"));
+const operate = (num1, operator, num2) => {
 
     if (operator == "+") {
         return num1 + num2;
@@ -20,21 +17,32 @@ const operate = () => {
     }
 };
 
-// console.log(operate());
-
 const buttons = document.querySelectorAll('.buttons button');
 const display = document.querySelector('.display');
 
-console.log(buttons);
+let input = "";
 
 buttons.forEach((btn) => {
     btn.onclick = () => {
-        display.textContent = btn.id;
+        input += btn.id
+        display.textContent = input;
     };
 });
+
+const delimiters = /(\d+|[+\-*\/])/g;
+
+const equal = buttons[2];
+equal.onclick = () => {
+    const parts = input.match(delimiters);
+    let num1 = Number(parts[0]);
+    let operator = parts[1];
+    let num2 = Number(parts[2]);
+    display.textContent = operate(num1, operator, num2);
+};
 
 const clear = buttons[0];
 clear.onclick = () => {
     display.textContent = "";
     console.clear();
+    input = "";
 }
