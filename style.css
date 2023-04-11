@@ -31,3 +31,28 @@
   width: 75px;
   font-size: 25px;
 }
+
+button[id="+"],
+button[id="-"],
+button[id="*"],
+button[id="/"] {
+  background-color: aquamarine;
+}
+
+button[id="0"],
+button[id="1"],
+button[id="2"],
+button[id="3"],
+button[id="4"],
+button[id="5"],
+button[id="6"],
+button[id="7"],
+button[id="8"],
+button[id="9"] {
+  background-color: aqua;
+}
+
+button[id="="],
+button[id="clear"] {
+  background-color: burlywood;
+}
